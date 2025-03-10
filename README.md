@@ -1,2 +1,6 @@
 # Final_Project
 BCOG200 final project
+1. For my final project, I will be creating an interactive quiz that determines whether users are more "left-brained" or "right-brained." Although I know this is not scientifically backed, I think it'd be fun to know whether I'm more of an analytical and logical or creative and intuitive person. I will present the user with about 10 questions that relate to their personal logic and creativity, such as "Do you prefer math and science or literature and art?" or "Do you plan things out or go with the flow?" Each answer will correspond to either left-brain or right-brain score. At the end, the points will be calculated and the user will be presented with a simple explanation of their results.
+2a. The first function will present the user with questions, give them answer choices, and record their response.
+2b. The next function will consider the response and assign a point value to it based on whether it aligns more with the "left-" or "right-brain." 
+2c. Another function in this program will present the user with their final result of whether they are more "left-brained" or "right-brained." A brief explanation will tell the user why they got the results they did, and maybe even give them advice for how to take advantage of their results in real-world situations.

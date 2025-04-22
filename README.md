@@ -24,3 +24,46 @@ Example data:
 
 Testing:
 This program could be used in a variety of different situations. It requires input from the user, which will always be in the form of a number between 1 and 5. I can test this program in a couple different ways. First, I can check the accuracy of the scoring. I can take the quiz and input only low values, which should lean more towards the left-brain result, and vice versa. If I get the appropriate results, I'll know that my code, specifically the function that's in charge of keeping score, works. Next, I can test the code with invalid input from the user, meaning anything other than numbers between 1 and 5. For example, as the user, I could input a letter or phrase. If I get the error statement, then I will know that that portion of the code works the way I want it to. Finally, I can recreate a real-world scenario where this might be used. I could ask a friend to attempt the quiz without any prior knowledge or instructions. By observing them move through the quiz, I'll be able to see if my instructions are clear, if the questions are presented well, and if the results show up in a visually appealing way. I could also ask them for some feedback regarding what I could add to make taking the quiz a better experience for the user. 
+
+Main Structure Code: 
+
+import csv
+
+def load_questions(file_name): #loads questions from csv file and assigns weights to side of brain (1 is left brained, -1 is right btained)
+    question_list=[]
+    with open(file_name, newline='', encoding= 'utf-8') as file: 
+        reader = csv.reader(file)
+
+
+def ask_question(question):
+    #has user answer questions on scale from 1 to 5, (strongly disagree to strongly agree)
+
+def give_quiz(questions):
+    #this will ask all the questions and record the user's responses
+    #remember to add error messages if user gives response other than number btwn 1 and 5
+
+def calculate_score(questions, responses):
+    #calculates overall score
+
+def show_result(score):
+    #prints final result with small explanation paragraph, possibly add some sort of graphic here??
+    #use if elif else to give options 
+
+def main():
+    questions_file = "brain_quiz_questions.csv"
+    print ("Welcome to the Brain Hemisphere Quiz!") #add more to this intro
+    print ("Answer each of the following questions on a scale from 1, meaning you strongly disagree, to 5, meaning you strongly agree.\n")
+
+    questions = load_questions(questions_file)
+    responses = give_quiz(questions)
+    score = calculate_score(questions, responses)
+    show_result(score)
+
+if __name__ == "__main__":
+    main()
+ding main_structure.py…]()
+
+
+
+
+

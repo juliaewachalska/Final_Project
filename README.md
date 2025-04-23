@@ -61,77 +61,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-ding main_structure.py…]()
-
-
-Updated Code:
-
-import csv
-
-def load_questions(file_name): #loads questions from csv file and assigns weights to side of brain (1 is left brained, -1 is right btained)
-    question_list=[]
-    with open(file_name, newline='', encoding= 'utf-8') as file: 
-        reader = csv.reader(file)
-        for row in reader:
-            question = row{0}
-            weight = int(row[1])
-            question_list.append((question,weight))
-        return question_list
-
-def print_instructions(file_name):
-    #prints instructions from text file
-    with open(file_name, 'r', encoding= 'utf-8') as file:
-        instructions = file.read()
-        print(instructions)
-
-
-def ask_question(question):
-    #has user answer questions with either 'true' or 'false'; returns as Boolean
-    while True:
-            response = input(f"{question} (True/False): ").strip().lower() #asked ChatGPT how to accept more diverse answers, such as those with spaces or in non-lowercase letter; told me to add .strip().lower()
-            if response == "true":
-                    return True
-            elif response == "false":
-                return False
-            else:
-            print("This input is invalid. Please type either 'True' or 'False.'")
-
-def give_quiz(questions):
-    #this will ask all the questions and record the user's responses
-    #remember to add error messages if user gives response other than number btwn 1 and 5
-    responses = []
-    for question, _ in questions:
-         response = ask_question(question)
-         responses.append(response)
-    return responses
-
-def calculate_score(responses):
-    #calculates overall score
-    # true means left brain, false means right brain
-    score = sum(1 if response else _1 for response in responses) 
-    return score
-
-def show_result(score):
-    #prints final result with small explanation paragraph, possibly add some sort of graphic here??
-    #use if elif else to give options 
-
-def save_result(score): 
-# saves score and result as text file
-#do i rly want/need this?
-
-def main():
-    questions_file = "brain_quiz_questions.csv"
-    print ("Welcome to the Brain Hemisphere Quiz!") #add more to this intro
-    print ("Answer each of the following questions on a scale from 1, meaning you strongly disagree, to 5, meaning you strongly agree.\n")
-
-    questions = load_questions(questions_file)
-    responses = give_quiz(questions)
-    score = calculate_score(questions, responses)
-    show_result(score)
-    save_result(score)
-
-if __name__ == "__main__":
-    main()
+   
 
 
 

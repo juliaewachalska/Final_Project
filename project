@@ -5,7 +5,7 @@ def load_questions(file_name): #loads questions from csv file and assigns weight
     with open(file_name, newline='', encoding= 'utf-8') as file: 
         reader = csv.reader(file)
         for row in reader:
-            question = row{0}
+            question = row[0]
             weight = int(row[1])
             question_list.append((question,weight))
         return question_list
@@ -26,7 +26,7 @@ def ask_question(question):
             elif response == "false":
                 return False
             else:
-            print("This input is invalid. Please type either 'True' or 'False.'")
+                print("This input is invalid. Please type either 'True' or 'False.'")
 
 def give_quiz(questions):
     #this will ask all the questions and record the user's responses
@@ -40,16 +40,29 @@ def give_quiz(questions):
 def calculate_score(responses):
     #calculates overall score
     # true means left brain, false means right brain
-    score = sum(1 if response else _1 for response in responses) 
+    score = 0
+    for (question, weight), response in zip(questions, responses):
+         if response:
+              score += weight
     return score
 
 def show_result(score):
-    #prints final result with small explanation paragraph, possibly add some sort of graphic here??
-    #use if elif else to give options 
+    print("\n#### QUIZ RESULTS ####\n")
+    if score > 0:
+         print("You are more left-brained!")
+         print("Being more left-brained means you tend to think more logically, analytically, and methodically. You likely prefer structure, enjoy working with facts and numbers, and excel in tasks involving language, reasoning, or problem-solving.")
+    elif score <0:
+         print("You are more right-brained!")
+         print("Being more right-brained means you tend to think more creatively, intuitively, and emotionally. You likely enjoy artistic expression, big-picture thinking, and are drawn to imagination, visuals, and abstract ideas.")
+    else:
+         print("You are a balance of both left and right brained!")
+         print("Being equal-brained means you have a balanced mix of logical and creative thinking styles. You can switch between analytical tasks and imaginative thinking.")
+
 
 def save_result(score): 
-# saves score and result as text file
-#do i rly want/need this?
+    with open("quiz_result.txt", "w") as file:
+         file.write(f"Score: {score}\n")
+
 
 def main():
     questions_file = "brain_quiz_questions.csv"

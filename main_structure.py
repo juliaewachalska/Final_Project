@@ -64,8 +64,8 @@ def save_result(score):
 
 def main():
     questions_file = "brain_quiz_questions.csv"
-    print ("Welcome to the Brain Hemisphere Quiz!") #add more to this intro
-    print ("Answer each of the following questions on a scale from 1, meaning you strongly disagree, to 5, meaning you strongly agree.\n")
+    print ("Welcome to the Brain Hemisphere Quiz! If you're interested in finding out whether you're more left-brained or right-brained, this is the place for you! You will be presented with a series of statements.")
+    print ("Answer each statement on a scale from 1, meaning you strongly disagree, to 5, meaning you strongly agree.\n")
 
     questions = load_questions(questions_file)
     responses = give_quiz(questions)

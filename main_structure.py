@@ -10,13 +10,6 @@ def load_questions(file_name): #loads questions from csv file and assigns weight
             question_list.append((question,weight))
         return question_list
 
-def print_instructions(file_name):
-    #prints instructions from text file
-    with open(file_name, 'r', encoding= 'utf-8') as file:
-        instructions = file.read()
-        print(instructions)
-
-
 def ask_question(question):
     #has user answer questions with a number between 1 and 5, and returns numeric value as an integer
     while True:

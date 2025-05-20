@@ -12,5 +12,12 @@ Be sure to also dowload the brain_quiz_questions.csv file!
 ## Testing
 I opted to create a narrative of how someone might be able to test the code and ensure that it runs properly. There are three ways to test different portions of the code.
 
-### Checking Instructions
-We can check if the printed instructions at the start appear correctly by running the code. 
+### Testing Questions
+We can ensure that all questions from the CSV file display correctly. We expect them to appear in the terminal one by one, with a reminder of the answer scale appearing with each question. If this occurs, we know that the CSV file is formatted appropriately, and that the load_questions() and ask_questions() functions work correctly.
+
+### Testing Result/Output
+We can also test to make sure that the results at the end display and work properly. After answering all questions, the code calculates a score adn returns a results to the user. We can confirm that the calculate_score() and show_result() functions work as they should.
+
+### Testing Input Validation
+We can test the user input to ensure that invalid responses aren't accepted. This can be done by inputting anything other than a number between 1 and 5. For example, "6" or "six" should re-prompt the user. This confirms that the ask_question() function works correctly.
+

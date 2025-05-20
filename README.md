@@ -8,3 +8,9 @@ The quiz begins with a simple introudction and instructions. The quiz then asks 
 
 ## Requirements 
 Be sure to also dowload the brain_quiz_questions.csv file!
+
+## Testing
+I opted to create a narrative of how someone might be able to test the code and ensure that it runs properly. There are three ways to test different portions of the code.
+
+# Checking Instructions
+here, 
